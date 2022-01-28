@@ -51,7 +51,7 @@
 #elif defined(_SAM3XA_)
   #include <UARTClass.h>  // Arduino Due
   #define SERIAL_CLASS UARTClass
-#elif defined(USE_USBCON)
+#elif defined(USE_USBCON) and !(defined(__STM32F1__))
   // Arduino Leonardo USB Serial Port
   #define SERIAL_CLASS Serial_
 #elif (defined(__STM32F1__) and !(defined(USE_STM32_HW_SERIAL))) or defined(SPARK) 
